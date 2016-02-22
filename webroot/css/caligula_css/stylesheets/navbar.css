@@ -1,0 +1,101 @@
+/*------------------------------ MENU
+----------------------------------------------------------------------------------------------------*/
+/* line 10, ../sass/navbar.scss */
+#navbar {
+  z-index: 100;
+  list-style: none;
+  font-size: 1.8rem;
+  width: 100%;
+  display: block;
+  text-align: right;
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  white-space: nowrap;
+}
+/* line 23, ../sass/navbar.scss */
+#navbar .navbar {
+  border-radius: 3px;
+  padding: 0 2px 0 2px;
+  display: inline-block;
+  border: solid 1px #515050;
+  -webkit-box-shadow: -1px -1px 2px 1px #464646, 1px 1px 2px 1px #f0f0f0;
+  -moz-box-shadow: -1px -1px 2px 1px #464646, 1px 1px 2px 1px #f0f0f0;
+  -ms-box-shadow: -1px -1px 2px 1px #464646, 1px 1px 2px 1px #f0f0f0;
+  -o-box-shadow: -1px -1px 2px 1px #464646, 1px 1px 2px 1px #f0f0f0;
+  box-shadow: -1px -1px 2px 1px #464646, 1px 1px 2px 1px #f0f0f0;
+}
+/* line 31, ../sass/navbar.scss */
+#navbar .mainitem:first-child, #navbar .mainitem:first-child:hover {
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+/* line 35, ../sass/navbar.scss */
+#navbar .mainitem:last-child, #navbar .mainitem:last-child:hover {
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+/* line 40, ../sass/navbar.scss */
+#navbar a {
+  display: block;
+  text-decoration: none;
+  color: #395147;
+  padding: 10px 5px 10px 5px;
+  -webkit-text-shadow: -1px -1px 1px #58786b, 1px 1px 1px #dbdada;
+  -moz-text-shadow: -1px -1px 1px #58786b, 1px 1px 1px #dbdada;
+  -ms-text-shadow: -1px -1px 1px #58786b, 1px 1px 1px #dbdada;
+  -o-text-shadow: -1px -1px 1px #58786b, 1px 1px 1px #dbdada;
+  text-shadow: -1px -1px 1px #58786b, 1px 1px 1px #dbdada;
+}
+/* line 48, ../sass/navbar.scss */
+#navbar .mainitem:hover, #navbar .underitem:hover, #navbar .selected, #navbar .selected-parent {
+  background: #607a6f;
+}
+/* line 52, ../sass/navbar.scss */
+#navbar .mainitem a:hover, #navbar .selected a {
+  color: #b7d4c8;
+  -webkit-text-shadow: -1px -1px 1px #283e35, 1px 1px 1px #9f9a9a;
+  -moz-text-shadow: -1px -1px 1px #283e35, 1px 1px 1px #9f9a9a;
+  -ms-text-shadow: -1px -1px 1px #283e35, 1px 1px 1px #9f9a9a;
+  -o-text-shadow: -1px -1px 1px #283e35, 1px 1px 1px #9f9a9a;
+  text-shadow: -1px -1px 1px #283e35, 1px 1px 1px #9f9a9a;
+}
+/* line 57, ../sass/navbar.scss */
+#navbar .mainitem:hover {
+  background: #607a6f;
+}
+/* line 61, ../sass/navbar.scss */
+#navbar .mainitem {
+  margin: 0 -3px 0 -2px;
+  position: relative;
+  display: inline-block;
+}
+/* line 67, ../sass/navbar.scss */
+#navbar .mainitem ul {
+  text-align: left;
+  position: absolute;
+  z-index: 101;
+  padding: 0 0 0 0;
+  visibility: hidden;
+  opacity: 0;
+  max-height: 0;
+  background: #839f93;
+  -webkit-box-shadow: -4px 0px 2px -1px #666363, 0 2px 2px 1px #f0f0f0;
+  -moz-box-shadow: -4px 0px 2px -1px #666363, 0 2px 2px 1px #f0f0f0;
+  -ms-box-shadow: -4px 0px 2px -1px #666363, 0 2px 2px 1px #f0f0f0;
+  -o-box-shadow: -4px 0px 2px -1px #666363, 0 2px 2px 1px #f0f0f0;
+  box-shadow: -4px 0px 2px -1px #666363, 0 2px 2px 1px #f0f0f0;
+  -webkit-touch-callout-transition: opacity 0.4s ease-in-out, max-height, 0.4s, ease-in-out;
+  -webkit-transition: opacity 0.4s ease-in-out, max-height, 0.4s, ease-in-out;
+  -khtml-transition: opacity 0.4s ease-in-out, max-height, 0.4s, ease-in-out;
+  -moz-transition: opacity 0.4s ease-in-out, max-height, 0.4s, ease-in-out;
+  -ms-transition: opacity 0.4s ease-in-out, max-height, 0.4s, ease-in-out;
+  -o-transition: opacity 0.4s ease-in-out, max-height, 0.4s, ease-in-out;
+  transition: opacity 0.4s ease-in-out, max-height, 0.4s, ease-in-out;
+}
+/* line 80, ../sass/navbar.scss */
+#navbar .mainitem:hover ul {
+  visibility: visible;
+  opacity: 1;
+  max-height: 350px;
+}

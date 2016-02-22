@@ -1,0 +1,9 @@
+/* line 1, ../sass/grid_demo.scss */
+#flash,
+main, #sidebar,
+#featured-1, #featured-2, #featured-3,
+#triptych-1, #triptych-2, #triptych-3,
+#footer-1, #footer-2, #footer-3, #footer-4 {
+  background: grey;
+  height: 40px;
+}

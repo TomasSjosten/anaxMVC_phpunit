@@ -1,0 +1,164 @@
+/* ------------------------------- FONTS
+--------------------------------------------------------------------------------------------------- */
+/* font-family: 'Roboto Slab', serif; */
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab);
+@import url(https://fonts.googleapis.com/css?family=Alegreya+Sans:800,400,400italic);
+@import url(https://fonts.googleapis.com/css?family=Black+Ops+One&subset=latin,latin-ext);
+/*------------------------------ VARIABLES
+----------------------------------------------------------------------------------------------------*/
+/* line 24, ../sass/form.scss */
+.buttons {
+  text-align: right;
+}
+
+/* line 29, ../sass/form.scss */
+form {
+  margin: 30px 0 0 0;
+}
+/* line 32, ../sass/form.scss */
+form li {
+  display: inline-block;
+  max-width: 23%;
+  min-width: 213px;
+  padding: 0 3px 0 0;
+  -webkit-box-shadow: 0 9px 14px -7px #527264 ;
+  -moz-box-shadow: 0 9px 14px -7px #527264 ;
+  -ms-box-shadow: 0 9px 14px -7px #527264 ;
+  -o-box-shadow: 0 9px 14px -7px #527264 ;
+  box-shadow: 0 9px 14px -7px #527264 ;
+}
+/* line 40, ../sass/form.scss */
+form li:not(:last-child) {
+  margin-right: 21px;
+  margin-bottom: 10px;
+}
+/* line 45, ../sass/form.scss */
+form li input {
+  width: 100%;
+}
+/* line 49, ../sass/form.scss */
+form fieldset {
+  border: solid 1px #839f93;
+  padding: 20px 10px 10px 10px;
+}
+
+/*------------------------------ LINK BUTTONS
+----------------------------------------------------------------------------------------------------*/
+/* line 59, ../sass/form.scss */
+.link_button {
+  min-width: 45px;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+}
+
+/*------------------------------ INPUT FIELDS
+----------------------------------------------------------------------------------------------------*/
+/* line 69, ../sass/form.scss */
+input[type="text"], input[type="email"], input[type="password"] {
+  height: 25px;
+  font-size: 100%;
+  padding: 2px 0 2px 0;
+}
+
+/*------------------------------ SMALL SIZED BUTTONS
+----------------------------------------------------------------------------------------------------*/
+/* line 79, ../sass/form.scss */
+.small_button {
+  padding: 2px 3px 2px 3px;
+  outline: none;
+  border-radius: 3px;
+}
+
+/*------------------------------ REGULAR SIZED BUTTONS
+----------------------------------------------------------------------------------------------------*/
+/* line 87, ../sass/form.scss */
+.medium_button {
+  cursor: pointer;
+  outline: 0;
+  height: 30px;
+  font-size: 110%;
+  padding: 0 10px 0 10px;
+  border-radius: 3px;
+  display: inline-block;
+  margin-right: 0;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+/* line 95, ../sass/form.scss */
+.medium_button:not(:first-child) {
+  margin-left: 5px;
+}
+
+/* line 106, ../sass/form.scss */
+textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[type="search"]:focus {
+  outline-color: #839f93;
+}
+
+/* line 112, ../sass/form.scss */
+.green_button {
+  background: #75cb70;
+  border: solid 1px #397636;
+  color: #256222;
+  -webkit-text-shadow: 1px 1px 0 #a6e7a3;
+  -moz-text-shadow: 1px 1px 0 #a6e7a3;
+  -ms-text-shadow: 1px 1px 0 #a6e7a3;
+  -o-text-shadow: 1px 1px 0 #a6e7a3;
+  text-shadow: 1px 1px 0 #a6e7a3;
+}
+/* line 119, ../sass/form.scss */
+.green_button:hover {
+  cursor: pointer;
+  background: #58b253;
+  border: solid 1px #32682f;
+}
+
+/* line 127, ../sass/form.scss */
+.blue_button {
+  background: #9ca1ee;
+  border: solid 1px #2d2f7a;
+  color: #252262;
+  -webkit-text-shadow: 1px 1px 0 #a3a8e7;
+  -moz-text-shadow: 1px 1px 0 #a3a8e7;
+  -ms-text-shadow: 1px 1px 0 #a3a8e7;
+  -o-text-shadow: 1px 1px 0 #a3a8e7;
+  text-shadow: 1px 1px 0 #a3a8e7;
+}
+/* line 134, ../sass/form.scss */
+.blue_button:hover {
+  cursor: pointer;
+  background: #6a72ec;
+  border: solid 1px #1f2170;
+}
+
+/* line 142, ../sass/form.scss */
+.red_button {
+  background: #ee7777;
+  border: solid 1px #ec2323;
+  color: #911e1e;
+  -webkit-text-shadow: 1px 1px 0 #f0a4a4;
+  -moz-text-shadow: 1px 1px 0 #f0a4a4;
+  -ms-text-shadow: 1px 1px 0 #f0a4a4;
+  -o-text-shadow: 1px 1px 0 #f0a4a4;
+  text-shadow: 1px 1px 0 #f0a4a4;
+}
+/* line 149, ../sass/form.scss */
+.red_button:hover {
+  cursor: pointer;
+  background: #e55858;
+  border: solid 1px #e51111;
+}
+
+/* line 158, ../sass/form.scss */
+textarea {
+  width: 100%;
+  min-height: 100px;
+  margin: 30px 0 10px 0;
+  border: solid 1px #c9c9c9;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 10px 9px -5px #415e51 ;
+  -moz-box-shadow: 0 10px 9px -5px #415e51 ;
+  -ms-box-shadow: 0 10px 9px -5px #415e51 ;
+  -o-box-shadow: 0 10px 9px -5px #415e51 ;
+  box-shadow: 0 10px 9px -5px #415e51 ;
+}

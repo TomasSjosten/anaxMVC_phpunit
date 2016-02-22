@@ -1,0 +1,6 @@
+RewriteEngine on
+RewriteRule  ^$ webroot/    [L]
+RewriteRule  ((?s).*) webroot/$1 [L]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f

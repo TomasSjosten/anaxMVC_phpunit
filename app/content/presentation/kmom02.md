@@ -1,0 +1,13 @@
+#Kmom02
+##Svårigheter/problem/lösningar...
+Jag hade lite problem med att förstå hur allting var uppbyggt till en början. Det kändes väldigt stelt och inte alls vad jag var van vid. Route och Controller - för mig uppfattades detta som ungefär samma sak till en början. Det tog ett tag innan jag löste det och lyckades separera vart logikerna ska finnas.
+
+Controllern som jag har den just nu, framförallt "OwncommentController" har jag tänkt lite fel, den fungerar men jag skulle vilja ha en annan struktur och det är någonting som jag tar med mig till kommande uppgifter. I controllern skulle jag istället för att lägga in logik helt enkelt skicka vidare requests till andra klasser, som i sin tur hanterar logiken. I "OwncommentController" skulle jag istället lägga in en callback ex. ["call_user_func_array"](http://php.net/manual/en/function.call-user-func-array.php) och med den kalla på olika klasser som har med kommentarer att göra och låta dem hantera logiken.
+
+Jag gjorde lite annorlunda när det gäller att dölja Formuläret. Såg exemplet och tipset i forumet men tänkte att jag inte ville kopiera det utan försöka hitta en alternativ väg för att lösa uppgiften.
+
+Jag tycker att Composer verkar otroligt lätt att arbeta med. Jag skulle vilja se mer av det under kursens gång, så att jag på ett strukturerat sätt kan lära mig mer om hur Composer fungerar. Jag tror, eller snarare vet, att Packagist är någonting som jag kommer använda mig av. Känns dumt att inte utnyttja det och uppfinna hjulet på nytt.. Jag hittade ingenting spännande i packagist då jag inte kollat runt så mycket ännu.
+
+Det tog ett tag att sätta sig in i begreppen, jag är inte helt bekväm med begreppen ännu men det tänker jag att det kommer. Jag förstår översiktligt hur de hänger ihop, kan dock inte riktigt förklara det på ett bra sätt. Route är för mig sidhanteringen i ramverket, där alla "huvud"-sidor ligger och som ska nås från Menyn. Controllern hanterar klass-logiken och ger "respons" på olika parametrar, bestämmer lite vad som ska hända ifall någon ex. submittar ett formulär, loggar in osv.. Dispatcher hanterar parametrar och requests, skickar parametrarna till Controllern som i sin tur hanterar responsen.
+
+Jag gjorde lite förändringar i Comment, byggde upp min egna klass och använde mig lite av den comment-klassen som följde med. Jag hade den att utgå ifrån för att hänga med på vilka olika tjänster som bör utnyttjas ex. "setDI()", set->session() osv..
