@@ -17,7 +17,7 @@ matrix:
 
 before_script:
     #- wget http://getcomposer.org/composer.phar
-    #- php composer.phar install --no-interaction
+    #- phps composer.phar install --no-interaction
     - wget https://scrutinizer-ci.com/ocular.phar
 
 
