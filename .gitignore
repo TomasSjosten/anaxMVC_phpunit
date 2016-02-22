@@ -16,6 +16,8 @@ Thumbs.db
 .sass-cache*
 sass
 sass*
+.idea
+.idea?
 
 # Package handling
 composer.json
