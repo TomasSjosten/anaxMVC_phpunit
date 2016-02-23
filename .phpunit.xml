@@ -24,4 +24,11 @@
         <log type="coverage-clover" target="coverage.clover" />
    </logging>
 
+    <php>
+        <var name="DB_DSN" value="mysql:dbname=myguestbook;host=localhost" />
+        <var name="DB_USER" value="user" />
+        <var name="DB_PASSWD" value="passwd" />
+        <var name="DB_DBNAME" value="myguestbook" />
+    </php>
+
 </phpunit>
