@@ -119,8 +119,6 @@ class UsersController implements \Anax\DI\IInjectionAware
     }
 
 
-
-
     public function inActiveListAction()
     {
         $all = $this->users->query()
@@ -136,9 +134,6 @@ class UsersController implements \Anax\DI\IInjectionAware
           ]
         );
     }
-
-
-
 
 
     public function trashListAction()
@@ -157,9 +152,6 @@ class UsersController implements \Anax\DI\IInjectionAware
     }
 
 
-
-
-
     public function inactivateAction($userId)
     {
         $id = filter_var($userId, FILTER_SANITIZE_NUMBER_INT);
@@ -170,8 +162,6 @@ class UsersController implements \Anax\DI\IInjectionAware
         $url = $this->url->create($_SERVER['HTTP_REFERER']);
         $this->response->redirect($url);
     }
-
-
 
 
     public function activateAction($userId)
@@ -186,26 +176,11 @@ class UsersController implements \Anax\DI\IInjectionAware
     }
 
 
-
-
-
-
-
-    public function setupAction()
+    public function setupAction(array $tableNames = [])
     {
-        $this->users->createTable(
-          [
-            'id' => ['integer', 'primary key', 'not null', 'auto_increment'],
-            'acronym' => ['varchar(20)', 'unique', 'not null'],
-            'email' => ['varchar(80)'],
-            'name' => ['varchar(80)'],
-            'password' => ['varchar(255)'],
-            'created' => ['datetime'],
-            'updated' => ['datetime'],
-            'deleted' => ['datetime'],
-            'active' => ['datetime'],
-          ]
-        );
+        $tables = $this->setTableNames($tableNames);
+
+        $this->users->createTable($tables);
 
         $addUsers = ['Saga', 'Nilsson', 'Berit', 'Mackan'];
         foreach ($addUsers as $user) {
@@ -216,6 +191,24 @@ class UsersController implements \Anax\DI\IInjectionAware
         $this->response->redirect($url);
     }
 
+    private function setTableNames(array $options = array())
+    {
+        $default = [
+          'id' => ['integer', 'primary key', 'not null', 'auto_increment'],
+          'acronym' => ['varchar(20)', 'unique', 'not null'],
+          'email' => ['varchar(80)'],
+          'name' => ['varchar(80)'],
+          'password' => ['varchar(255)'],
+          'created' => ['datetime'],
+          'updated' => ['datetime'],
+          'deleted' => ['datetime'],
+          'active' => ['datetime'],
+        ];
+
+        $tableArray = array_merge($default, $options);
+
+        return $tableArray;
+    }
 
     private function add($acronym, $name = null, $password = null)
     {
@@ -223,7 +216,7 @@ class UsersController implements \Anax\DI\IInjectionAware
             die("Missing acronym");
         }
 
-        $acronym =  ucfirst($acronym);
+        $acronym = ucfirst($acronym);
         $password = (isset($password)) ? $password : $acronym;
         $now = date('Y-m-d H:i:s');
 
@@ -239,7 +232,6 @@ class UsersController implements \Anax\DI\IInjectionAware
         );
     }
 
-
     public function addAction()
     {
         $this->theme->setTitle('Add user');
@@ -253,44 +245,15 @@ class UsersController implements \Anax\DI\IInjectionAware
         );
     }
 
-
-
-
-
-    public function editAction($thisId)
-    {
-        $this->theme->setTitle('Edit user');
-
-        $user = $this->users->find($thisId);
-
-        $user = [
-            'name' => $user->name,
-            'acronym' => $user->acronym,
-            'email' => $user->email,
-            'created' => $user->created,
-            'deleted' => $user->deleted,
-            'active' => $user->active,
-        ];
-
-        $form = $this->userForm($user);
-
-        $this->views->add('users/page',
-          [
-              'content' => $form,
-          ]
-        );
-    }
-
-
     private function userForm($options = array())
     {
         $default = [
-            'name' => null,
-            'acronym' => null,
-            'email' => null,
-            'created' => $this->now,
-            'deleted' => null,
-            'active' => $this->now,
+          'name' => null,
+          'acronym' => null,
+          'email' => null,
+          'created' => $this->now,
+          'deleted' => null,
+          'active' => $this->now,
         ];
 
         $params = array_merge($default, $options);
@@ -362,5 +325,29 @@ class UsersController implements \Anax\DI\IInjectionAware
         $form->check();
 
         return $form->getHTML();
+    }
+
+    public function editAction($thisId)
+    {
+        $this->theme->setTitle('Edit user');
+
+        $user = $this->users->find($thisId);
+
+        $user = [
+          'name' => $user->name,
+          'acronym' => $user->acronym,
+          'email' => $user->email,
+          'created' => $user->created,
+          'deleted' => $user->deleted,
+          'active' => $user->active,
+        ];
+
+        $form = $this->userForm($user);
+
+        $this->views->add('users/page',
+          [
+            'content' => $form,
+          ]
+        );
     }
 }
