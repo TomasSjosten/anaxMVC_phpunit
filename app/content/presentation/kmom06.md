@@ -1,0 +1,11 @@
+# Kmom06
+
+Jag har aldrig tidigare använt mig av unittestning. Jag har hört om det tidigare dock aldrig riktigt satt mig in i vad det är eller vilket stöd som det ger utvecklaren. Jag tycker att det är otroligt användbart, verkligen. Jag ser många vinster i det, märkte direkt att jag behöver strukturera koden på ett annat sätt och det här är någonting som jag kommer implementera framöver redan i startskedet av något projekt.
+
+Det var väldigt lätt att göra testfallen för modulen som jag byggde tidigare. Det blev dock snabbt mycket svårare att integrera med DI m.m. i ramverket och jag är inte helt med där. Jag försökte även någon timma att integrera databastester men gick rätt snabbt bet där. Det var lite mer att bita i. Dels att få ihop det med ramverkets alla delar och samtidigt lära sig att integrera unittesterna. Jag kom så långt att jag enbart hade problem med att kalla på databasenmodellens metoder, där förväntades rätt klassnamn att integrera med befintliga databasen. Jag lade då ned projektet med databasen.
+
+Travis och Scrutinizer var otroligt lätt att använda sig av. I princip skapa konto och köra. Jag har börjat skriva testkod för andra små moduler som jag har och ska lägga in dessa till Travis och Scrutinizer.
+
+Jag kommer definitivt att jobba vidare med dessa verktyg, de var enkla att använda sig av och lätta att förstå. Jag var inte helt bekväm med dem i början, dels för att jag inte riktigt visste hur jag skulle skriva testerna och på vilket sätt som jag skulle göra om koden. Det kändes lite då och då att jag skrev om koden för att passa i testet, vilket kanske är fel. Jag tror att det krävs mer tid att skriva tester och kod för att få en känsla om vad som är bra kod och testkod, vart gränslandet emellan dem är.
+
+Jag gjorde extrauppgiften dock så blev den inte så omfattande som jag ville. Jag testar numera även min "UserController", enbart skapande av usertabellen så att kolumnnamnen är korrekta och att det går att lägga in ytterligare kolumner via Injection. Jag kontrollerar nycklarna och att det är en array samt antal nycklar.

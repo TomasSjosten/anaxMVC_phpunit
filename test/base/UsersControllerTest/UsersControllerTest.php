@@ -65,8 +65,6 @@ class UsersControllerTest extends \PHPUnit_Framework_TestCase
 
         // Check that value is consistent
         $this->assertEquals(count($userTableInjected), 11, 'Injected table missing columns');
-
-
     }
 
 

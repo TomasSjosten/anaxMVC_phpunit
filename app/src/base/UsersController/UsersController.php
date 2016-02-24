@@ -179,8 +179,8 @@ class UsersController implements \Anax\DI\IInjectionAware
     public function setupAction(array $tableNames = [])
     {
         $tables = $this->setTableNames($tableNames);
+        $this->createUserTable($tables);
 
-        $this->users->createTable($tables);
 
         $addUsers = ['Saga', 'Nilsson', 'Berit', 'Mackan'];
         foreach ($addUsers as $user) {
@@ -189,6 +189,11 @@ class UsersController implements \Anax\DI\IInjectionAware
 
         $url = $this->url->create('users/list/');
         $this->response->redirect($url);
+    }
+
+    private function createUserTable(array $tables)
+    {
+        $this->users->createTable($tables);
     }
 
     private function setTableNames(array $options = array())
